@@ -238,11 +238,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f53f0e5cd92ba5148aace93d59b06aaf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.45
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f53f0e5cd92ba5148aace93d59b06aaf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.58
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f53f0e5cd92ba5148aace93d59b06aaf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -278,11 +278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 482806, guid: f53f0e5cd92ba5148aace93d59b06aaf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: -10.13
       objectReference: {fileID: 0}
     - target: {fileID: 482806, guid: f53f0e5cd92ba5148aace93d59b06aaf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: -6.07
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: f53f0e5cd92ba5148aace93d59b06aaf, type: 3}
       propertyPath: m_Size.x
@@ -296,6 +296,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: da13d6577601b43e09df69187744d1e2, type: 2}
+    - target: {fileID: 11405038, guid: f53f0e5cd92ba5148aace93d59b06aaf, type: 3}
+      propertyPath: jumpRotationSpeed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f53f0e5cd92ba5148aace93d59b06aaf, type: 3}
 --- !u!1 &634175843
