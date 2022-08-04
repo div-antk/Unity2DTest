@@ -324,6 +324,14 @@ PrefabInstance:
       propertyPath: groundStopDistance
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f53f0e5cd92ba5148aace93d59b06aaf, type: 3}
+      propertyPath: wallSticksDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f53f0e5cd92ba5148aace93d59b06aaf, type: 3}
+      propertyPath: timeToWallSlideSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 11405038, guid: f53f0e5cd92ba5148aace93d59b06aaf, type: 3}
       propertyPath: jumpRotationSpeed
       value: 0
