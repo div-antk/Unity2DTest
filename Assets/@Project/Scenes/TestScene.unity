@@ -305,6 +305,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: f53f0e5cd92ba5148aace93d59b06aaf, type: 3}
+      propertyPath: enableDashes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f53f0e5cd92ba5148aace93d59b06aaf, type: 3}
       propertyPath: timeToAirSpeed
       value: 0
       objectReference: {fileID: 0}
