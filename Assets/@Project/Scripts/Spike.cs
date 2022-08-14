@@ -8,6 +8,11 @@ public class Spike : MonoBehaviour
         if (other.name.Contains("Player"))
         {
             Destroy(other.gameObject);
+        
+            // シーンに存在するCameraShakerスクリプトを検索する
+            var cameraShaker = FindObjectOfType<CameraShaker>();
+            
+            cameraShaker.Shake();
         }
     }
 }
