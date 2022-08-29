@@ -3328,6 +3328,8 @@ GameObject:
   - component: {fileID: 1549547677}
   - component: {fileID: 1549547676}
   - component: {fileID: 1549547675}
+  - component: {fileID: 1549547679}
+  - component: {fileID: 1549547678}
   m_Layer: 0
   m_Name: Grey On (32x8)_0
   m_TagString: Untagged
@@ -3422,6 +3424,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1549547678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549547674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16551b72c1c21a549bb2d95a308df64b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1549547679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549547674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd95c429c7654e9c861fa1971b412e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_distance: {x: 5, y: 0, z: 0}
+  m_speed: 0.5
 --- !u!1 &1571111575
 GameObject:
   m_ObjectHideFlags: 0

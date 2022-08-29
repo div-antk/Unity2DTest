@@ -16,7 +16,7 @@ public class MovePlatform : MonoBehaviour
     // 終了位置
     private Vector3 m_endPosition;
 
-    void void Awake()
+    private void Awake()
     {
          // 現在位置を開始位置として記憶する
         m_startPosition = transform.localPosition;
