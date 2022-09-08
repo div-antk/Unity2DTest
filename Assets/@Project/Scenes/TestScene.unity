@@ -370,6 +370,8 @@ GameObject:
   - component: {fileID: 467711299}
   - component: {fileID: 467711298}
   - component: {fileID: 467711297}
+  - component: {fileID: 467711301}
+  - component: {fileID: 467711300}
   m_Layer: 0
   m_Name: Run (32x32)_0
   m_TagString: Untagged
@@ -464,6 +466,105 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &467711300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467711296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d522286c13b9ff41b33ba3ff16074d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  staticEnvLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  envCheckDistance: 0.04
+  minDistanceFromEnv: 0.02
+  numOfIterations: 2
+  enableOneWayPlatforms: 1
+  oneWayPlatformsAreWalls: 1
+  movingPlatformLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  additionalRaycastsPerSide: 1
+  groundSpeed: 3
+  timeToGroundSpeed: 0
+  groundStopDistance: 0
+  airSpeed: 3
+  changeDirectionInAir: 1
+  timeToAirSpeed: 0
+  airStopDistance: 0
+  fallSpeed: 16
+  gravityMultiplier: 4
+  fastFallSpeed: 32
+  fastFallGravityMultiplier: 8
+  ladderSpeed: 5
+  jumpHeight: 1.5
+  extraJumpHeight: 1.5
+  numOfAirJumps: 1
+  jumpWindowWhenFalling: 0.2
+  jumpWindowWhenActivated: 0.2
+  enableSlopes: 1
+  angleAllowedForMoving: 50
+  minimumSpeedToMoveUpSlipperySlope: 7.5
+  changeSpeedOnSlopes: 1
+  speedMultiplierOnSlope: 0.75
+  stickOnGround: 1
+  distanceToCheckToStick: 0.4
+  enableWallJumps: 1
+  wallJumpMultiplier: 1
+  wallJumpAngle: 70
+  enableWallSticks: 1
+  wallSticksDuration: 1
+  enableWallSlides: 1
+  wallSlideSpeed: 5
+  timeToWallSlideSpeed: 3
+  enableCornerGrabs: 1
+  cornerGrabDuration: 1
+  cornerJumpMultiplier: 1
+  cornerDistanceCheck: 0.2
+  normalizedValidWallInteraction: 0.2
+  ignoreMovementAfterJump: 0.2
+  wallInteractionCooldown: 0.1
+  wallInteractionThreshold: 0.5
+  enableDashes: 1
+  dashDistance: 3
+  dashDuration: 0.2
+  dashCooldown: 0.76
+  dashEasingFunction: 1
+  endDashNoGravityDuration: 0.1
+  movingPlatformDebug: 0
+  iterationDebug: 0
+  slopeNormal: {x: 0, y: 0}
+--- !u!61 &467711301
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467711296}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.4}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &634175843
 GameObject:
   m_ObjectHideFlags: 0
