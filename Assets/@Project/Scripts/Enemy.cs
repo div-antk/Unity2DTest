@@ -19,6 +19,12 @@ public class Enemy : MonoBehaviour
         // 敵の移動を制御するコンポーネントを取得する
         m_motor = GetComponent<PlatformerMotor2D>();
 
+        // 最初は左に移動する
+        m_motor.normalizedXMovement = -1;
+
+        // 敵のスプライトを表示するコンポーネントを取得する
+        m_renderer = GetComponent<SpriteRenderer>();
+
         // 最初は画像を左向きにする
         m_renderer.flipX = false;
 
