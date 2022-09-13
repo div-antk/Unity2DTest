@@ -59,4 +59,18 @@ public class Enemy : MonoBehaviour
             m_renderer.flipX = !m_renderer.flipX;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.name.Contains("Player"))
+        {
+            // プレイヤーからPlayerスクリプトを取得
+            var player = other.GetComponent<Player>();
+
+            // プレイヤーがやられたときに呼び出す関数を実行
+            player.Dead();
+        }
+    }
 }
+
+
