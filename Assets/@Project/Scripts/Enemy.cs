@@ -64,11 +64,32 @@ public class Enemy : MonoBehaviour
     {
         if (other.name.Contains("Player"))
         {
+            // プレイヤーの移動を制御するコンポーネントを取得する
+            var motor = other.GetComponent<PlatformerMotor2D>();
+
+            // プレイヤーが落下中の場合
+            if (motor.IsFalling())
+            {
+                // 敵を削除
+                Destroy(gameObject);
+
+                // プレイヤーをジャンプさせる
+                motor.ForceJump();
+
+                // シーンに存在するCameShakerスクリプトを検索
+                var cameraShaker = FindObjectOfType<CameraShaker>();
+
+                cameraShaker.Shake();
+            }
+            // プレイヤーが落下中ではない場合
+            else
+            {
             // プレイヤーからPlayerスクリプトを取得
             var player = other.GetComponent<Player>();
 
             // プレイヤーがやられたときに呼び出す関数を実行
             player.Dead();
+            }
         }
     }
 }
