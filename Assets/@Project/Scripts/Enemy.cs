@@ -14,6 +14,9 @@ public class Enemy : MonoBehaviour
     // 敵の当たり判定を管理するコンポーネント
     private BoxCollider2D m_collider;
 
+    // やられアニメーションのプレハブ
+    public GameObject m_hitPrefab;
+
     private void Awake()
     {
         // 敵の移動を制御するコンポーネントを取得する
@@ -80,6 +83,9 @@ public class Enemy : MonoBehaviour
                 var cameraShaker = FindObjectOfType<CameraShaker>();
 
                 cameraShaker.Shake();
+
+                // やられアニメーションのオブジェクトを生成する
+                Instantiate(m_hitPrefab, transform.position, Quaternion.identity);
             }
             // プレイヤーが落下中ではない場合
             else
