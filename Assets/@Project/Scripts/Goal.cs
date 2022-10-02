@@ -18,6 +18,11 @@ public class Goal : MonoBehaviour
                 cameraShake.Shake();
 
                 m_isGoal = true;
+            
+                // ゴールのアニメーターを取得
+                var animator = GetComponent<Animator>();
+
+                animator.Play("Pressed");
             }
         }
     }
