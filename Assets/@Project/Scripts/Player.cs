@@ -8,9 +8,11 @@ public class Player : MonoBehaviour
 {
     public GameObject m_playerHitPrefab;
 
-    // ジャンプした時に再生する SE
+    // ジャンプしたときのSE
     public AudioClip m_jumpClip;
 
+    // やられたときのSE
+    public AudioClip m_hitClip; 
 
     // シーンが開始する時に呼び出される関数
     private void Awake()
@@ -27,12 +29,15 @@ public class Player : MonoBehaviour
     {
         // ジャンプした時の SE を再生する
         var audioSource = FindObjectOfType<AudioSource>();
-        audioSource.PlayOneShot( m_jumpClip );
+        audioSource.PlayOneShot(m_jumpClip);
     }
 
     // プレイヤーがやられたときに呼び出す関数
     public void Dead()
     {
+        var audioSource = FindObjectOfType<AudioSource>();
+        audioSource.PlayOneHit(m_hitClip); 
+
         // プレイヤーを非表示にする
         // Destroy 関数でプレイヤーを削除してしまうと
         // OnRetry 関数が呼び出されなくなるため
@@ -55,20 +60,6 @@ public class Player : MonoBehaviour
             Quaternion.identity
         );
     }
-
-    private AudioClip m_jumpClip;
-
-     private void Awake() {
-        var motor = GetComponent<PrivateMoror2D>();
-
-        motor.onJump += OnJump()     
-    }
-
-private void OnJump()
-{
-    var audioSource = FindObjectOfType<audioSource>();
-    audioSource.PlayOnShot(m_playerHitPrefab);
-}
 
     // リトライするたびに呼び出される関数
     private void onRetry()
