@@ -35,9 +35,6 @@ public class Player : MonoBehaviour
     // プレイヤーがやられたときに呼び出す関数
     public void Dead()
     {
-        var audioSource = FindObjectOfType<AudioSource>();
-        audioSource.PlayOneHit(m_hitClip); 
-
         // プレイヤーを非表示にする
         // Destroy 関数でプレイヤーを削除してしまうと
         // OnRetry 関数が呼び出されなくなるため
@@ -59,6 +56,10 @@ public class Player : MonoBehaviour
             transform.position,
             Quaternion.identity
         );
+
+        // やられ時のSEを再生
+        var audioSource = FindObjectOfType<AudioSource>();
+        audioSource.PlayOneHit(m_hitClip); 
     }
 
     // リトライするたびに呼び出される関数

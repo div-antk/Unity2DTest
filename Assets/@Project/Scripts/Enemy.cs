@@ -17,6 +17,9 @@ public class Enemy : MonoBehaviour
     // やられアニメーションのプレハブ
     public GameObject m_hitPrefab;
 
+    // やられたときのSE
+    public AudioClip m_hitClip; 
+
     private void Awake()
     {
         // 敵の移動を制御するコンポーネントを取得する
@@ -86,6 +89,10 @@ public class Enemy : MonoBehaviour
 
                 // やられアニメーションのオブジェクトを生成する
                 Instantiate(m_hitPrefab, transform.position, Quaternion.identity);
+
+                // やられ時のSEを再生
+                var audioSource = FindObjectOfType<AudioSource>();
+                audioSource.PlayOneHit(m_hitClip); 
             }
             // プレイヤーが落下中ではない場合
             else
