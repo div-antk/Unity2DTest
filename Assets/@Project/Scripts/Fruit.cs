@@ -7,6 +7,9 @@ public class Fruit : MonoBehaviour
     // 獲得演出のプレハブ
     public GameObject m_collectredPrefab;
 
+    // フルーツ取得時のSE
+    public AudioClip m_collectredClip;
+
     // 他のプロジェクトとぶつかったときに呼び出される関数
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -35,6 +38,10 @@ public class Fruit : MonoBehaviour
             
             // 自分自身を削除
             Destroy(gameObject);
+
+            // SEを再生
+            var audioSource = FindObjectOfType<AudioSource>();
+            audioSource.PlayOneShot(m_collectredClip);
         }
     }
 }
