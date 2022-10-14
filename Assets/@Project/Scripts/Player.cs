@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
 
         // やられ時のSEを再生
         var audioSource = FindObjectOfType<AudioSource>();
-        audioSource.PlayOneHit(m_hitClip); 
+        audioSource.PlayOneShot(m_hitClip); 
     }
 
     // リトライするたびに呼び出される関数

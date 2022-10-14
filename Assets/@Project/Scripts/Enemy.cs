@@ -92,7 +92,7 @@ public class Enemy : MonoBehaviour
 
                 // やられ時のSEを再生
                 var audioSource = FindObjectOfType<AudioSource>();
-                audioSource.PlayOneHit(m_hitClip); 
+                audioSource.PlayOneShot(m_hitClip); 
             }
             // プレイヤーが落下中ではない場合
             else
