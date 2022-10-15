@@ -2487,3 +2487,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_playerHitPrefab: {fileID: 8912298658711322782, guid: 469e37f07947e4237b500cd960c200ef,
     type: 3}
+  m_jumpClip: {fileID: 8300000, guid: 7c0004b6416274420aea5134f00df0f5, type: 3}
+  m_hitClip: {fileID: 8300000, guid: 77c9c82249d21422892078cf0b66695d, type: 3}
