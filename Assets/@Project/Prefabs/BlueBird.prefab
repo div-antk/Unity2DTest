@@ -221,3 +221,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_hitPrefab: {fileID: 5645101568046669980, guid: ca88dd05fa6f344b1a66d82dd84af3c1,
     type: 3}
+  m_hitClip: {fileID: 8300000, guid: 6d97fa9fba360406a9dded461d282526, type: 3}
