@@ -93,6 +93,10 @@ public class Enemy : MonoBehaviour
                 // やられ時のSEを再生
                 var audioSource = FindObjectOfType<AudioSource>();
                 audioSource.PlayOneShot(m_hitClip); 
+
+                // プレイヤーがジャンプしたときのSEは再生しないようにする
+                var player = other.GetComponent<Player>();
+                player.IsSkipJumpSe = true;
             }
             // プレイヤーが落下中ではない場合
             else
