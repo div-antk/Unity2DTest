@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
     // ジャンプしたときのSE
     public AudioClip m_jumpClip;
 
+    // ジャンプしたときのSEをスキップするかどうか
+    public bool IsSkipJumpSe;
+
     // やられたときのSE
     public AudioClip m_hitClip; 
 
@@ -27,9 +30,16 @@ public class Player : MonoBehaviour
     // ジャンプした時に呼び出される関数
     private void OnJump()
     {
-        // ジャンプした時の SE を再生する
-        var audioSource = FindObjectOfType<AudioSource>();
-        audioSource.PlayOneShot(m_jumpClip);
+        if (IsSkipJumpSe)
+        {
+            IsSkipJumpSe = false;
+        }
+        else
+        {
+            // ジャンプした時の SE を再生する
+            var audioSource = FindObjectOfType<AudioSource>();
+            audioSource.PlayOneShot(m_jumpClip);
+        }
     }
 
     // プレイヤーがやられたときに呼び出す関数
